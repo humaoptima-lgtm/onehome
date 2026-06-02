@@ -1,0 +1,124 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--navy);
+  margin: 0;
+}
+
+.resetBtn {
+  background: none;
+  border: none;
+  color: var(--slate);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.resetBtn:hover {
+  color: var(--navy);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--border);
+}
+
+.groupTitle {
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: var(--navy);
+  margin: 0;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: var(--white);
+  color: var(--slate);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filterBtn:hover {
+  border-color: var(--slate-light);
+}
+
+.filterBtn.active {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--slate);
+  cursor: pointer;
+}
+
+.checkboxLabel input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--emerald);
+  cursor: pointer;
+}
+
+.rangeInputs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.input {
+  flex: 1;
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  color: var(--navy);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--emerald);
+}
+
+.applyWrapper {
+  padding-top: var(--space-4);
+  position: sticky;
+  bottom: 0;
+  background: var(--white);
+}

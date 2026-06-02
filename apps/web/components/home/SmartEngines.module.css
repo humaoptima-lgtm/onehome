@@ -1,0 +1,313 @@
+.section {
+  background-color: var(--color-navy);
+  padding: var(--space-16) 0;
+  color: var(--white);
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--space-12);
+}
+
+.kicker {
+  color: var(--color-gold);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-4);
+  font-family: var(--font-body);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 400; /* Looks elegant and serif-like in the image */
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+  }
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cardHeader {
+  margin-bottom: var(--space-6);
+}
+
+.cardKicker {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-gold);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-3);
+}
+
+.kickerIcon {
+  color: var(--color-gold);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--white);
+  margin-bottom: var(--space-3);
+  font-weight: 600;
+}
+
+.cardDesc {
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Slider Overrides for Dark Theme */
+.sliderWrapper {
+  margin-bottom: var(--space-8);
+  flex: 1;
+}
+
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: ew-resize;
+  background-color: var(--color-navy-muted);
+}
+
+@media (min-width: 768px) {
+  .sliderContainer {
+    height: 300px;
+  }
+}
+
+.image {
+  object-fit: cover;
+}
+
+.beforeWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.labelBefore, .labelAfter {
+  position: absolute;
+  top: 16px;
+  padding: 4px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.labelBefore {
+  left: 16px;
+}
+
+.labelAfter {
+  right: 16px;
+  z-index: 5; /* Lower than before wrapper so it stays on the right side */
+}
+
+.handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  z-index: 20;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.handleLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--white);
+  box-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+.handleButton {
+  width: 32px;
+  height: 32px;
+  background-color: var(--white);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 21;
+}
+
+/* Calculator specific */
+.calculatorBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  flex: 1;
+  margin-bottom: var(--space-8);
+}
+
+.sliderGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.sliderLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sliderLabel span {
+  color: #94a3b8;
+}
+
+.sliderLabel strong {
+  color: var(--color-gold);
+  font-size: 13px;
+}
+
+.resultBox {
+  margin-top: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resultLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.resultLabel {
+  color: #94a3b8;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.resultValue {
+  color: var(--color-gold);
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+}
+
+.resultRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  text-align: right;
+}
+
+.resultMeta {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.resultMeta strong {
+  color: var(--white);
+}
+
+.resultMetaHighlight {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.resultMetaHighlight strong {
+  color: var(--color-emerald); 
+}
+
+/* Actions */
+.cardFooter {
+  margin-top: auto;
+}
+
+.actionBtn {
+  background-color: var(--white) !important;
+  color: var(--navy) !important;
+  border: none !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+  font-size: 12px !important;
+}
+
+.actionBtn:hover {
+  background-color: #f1f5f9 !important;
+}
+
+.actionBtnDark {
+  background-color: transparent !important;
+  color: var(--white) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+  font-size: 12px !important;
+}
+
+.darkSlider {
+  --emerald: var(--color-emerald);
+  --emerald-light: var(--color-emerald-light);
+  --border: rgba(255, 255, 255, 0.1);
+  --white: var(--color-gold);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+}

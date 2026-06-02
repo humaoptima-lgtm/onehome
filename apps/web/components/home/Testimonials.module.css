@@ -1,0 +1,132 @@
+.section {
+  padding: 80px 0;
+  background: var(--color-bg-warm);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--color-slate);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid var(--color-border-light);
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.quoteIcon {
+  color: var(--color-emerald-light);
+  margin-bottom: 16px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 16px;
+}
+
+.text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-slate-dark);
+  margin-bottom: 20px;
+}
+
+.meta {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.project {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--color-bg-cool);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-slate);
+}
+
+.savings {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--color-emerald-light);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-emerald);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.authorName {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.authorRole {
+  font-size: 12px;
+  color: var(--color-slate);
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .section { padding: 56px 0; }
+  .grid { grid-template-columns: 1fr; }
+  .title { font-size: 24px; }
+}

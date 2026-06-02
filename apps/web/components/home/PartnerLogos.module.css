@@ -1,0 +1,94 @@
+.section {
+  padding: var(--space-12) 0;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-8);
+}
+
+.logoRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-12) var(--space-16);
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.4;
+  transition: opacity var(--transition-normal);
+  padding: 0 var(--space-4);
+}
+
+.logoWrapper:hover {
+  opacity: 0.85;
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: var(--color-navy);
+  user-select: none;
+}
+
+/* Specific styling to mimic real logos slightly */
+.logoRow > div:nth-child(1) .logoText {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.logoRow > div:nth-child(2) .logoText {
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: var(--font-size-md);
+}
+
+.logoRow > div:nth-child(3) .logoText {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.logoRow > div:nth-child(4) .logoText {
+  font-family: var(--font-body);
+  font-weight: 800;
+  text-transform: lowercase;
+  font-size: var(--font-size-xl);
+  letter-spacing: -0.05em;
+}
+
+.logoRow > div:nth-child(5) .logoText {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: var(--font-size-md);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-8) 0;
+  }
+  
+  .logoRow {
+    gap: var(--space-8) var(--space-10);
+  }
+  
+  .logoText {
+    font-size: var(--font-size-md);
+  }
+}

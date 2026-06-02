@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": "c:\\laragon\\www\\One_Home\\apps\\smart-engine\\.venv\\Scripts\\python.exe",
+  "css.lint.unknownAtRules": "ignore"
+}

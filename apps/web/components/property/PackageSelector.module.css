@@ -1,0 +1,223 @@
+.wrapper {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  overflow: hidden;
+}
+
+.header {
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-cool);
+}
+
+.title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--navy);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: var(--text-sm);
+  color: var(--slate);
+  margin: var(--space-1) 0 0;
+}
+
+.packagesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  padding: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .packagesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .packagesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.packageCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+  background: var(--white);
+  transition: all var(--transition-base);
+  font-family: var(--font-body);
+}
+
+.packageCard:hover {
+  border-color: var(--slate-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.selectedCard {
+  border-color: var(--emerald);
+  box-shadow: 0 0 0 1px var(--emerald);
+}
+
+.popularCard {
+  border-color: var(--gold);
+}
+
+.popularBadge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 5;
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  color: var(--white);
+  background: var(--gold);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cardImageWrap {
+  position: relative;
+  width: 100%;
+  height: 120px;
+}
+
+.cardImage {
+  object-fit: cover;
+}
+
+.cardImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(11, 29, 58, 0.6) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-3);
+}
+
+.tierIcon {
+  color: var(--white);
+}
+
+.cardBody {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+.tierLabel {
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  color: var(--slate);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.packageName {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--navy);
+  margin: 0;
+}
+
+.packageDesc {
+  font-size: var(--text-sm);
+  color: var(--slate);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.priceSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
+}
+
+.packagePrice {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--navy);
+}
+
+.pricePerSqm {
+  font-size: var(--text-xs);
+  color: var(--slate);
+}
+
+.selectedIndicator {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  color: var(--emerald);
+  background: var(--white);
+  border-radius: var(--radius-full);
+  display: flex;
+  z-index: 5;
+}
+
+.detailSection {
+  padding: var(--space-6);
+  border-top: 1px solid var(--border);
+  background: var(--beige-light);
+}
+
+.detailTitle {
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  color: var(--navy);
+  margin-bottom: var(--space-4);
+}
+
+.featureList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+@media (min-width: 640px) {
+  .featureList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--navy);
+}
+
+.featureCheck {
+  color: var(--emerald);
+  flex-shrink: 0;
+}
+
+.ctaButton {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .ctaButton {
+    width: auto;
+  }
+}
