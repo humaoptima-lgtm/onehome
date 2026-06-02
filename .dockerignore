@@ -1,0 +1,17 @@
+node_modules
+.next
+.git
+.vscode
+*.md
+.env*
+!.env.example
+!.env.api.example
+!.env.engine.example
+docker
+logs
+.venv
+__pycache__
+*.pyc
+coverage
+dist
+.DS_Store
