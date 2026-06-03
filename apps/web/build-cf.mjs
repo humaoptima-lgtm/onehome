@@ -17,7 +17,7 @@ fs.renameSync('.open-next/worker.js', '.open-next/_worker.js');
 const routes = {
   version: 1,
   include: ["/*"],
-  exclude: ["/_next/*", "/favicon.ico", "/images/*", "/assets/*"]
+  exclude: ["/_next/static/*", "/favicon.ico", "/images/*", "/assets/*"]
 };
 fs.writeFileSync('.open-next/_routes.json', JSON.stringify(routes, null, 2));
 
