@@ -3,5 +3,11 @@
   "name": "onehome-web",
   "compatibility_date": "2026-06-03",
   "compatibility_flags": ["nodejs_compat"],
-  "pages_build_output_dir": ".open-next"
+  "pages_build_output_dir": ".open-next",
+  "kv_namespaces": [
+    {
+      "binding": "NEXT_CACHE_WORKERS_KV",
+      "id": "8ca8624c704d479292b54544cd6702f7"
+    }
+  ]
 }
