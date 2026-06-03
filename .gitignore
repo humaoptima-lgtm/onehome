@@ -25,3 +25,7 @@ Thumbs.db
 # Logs
 logs/
 *.log
+
+# cloudflare / opennext
+/apps/web/.open-next/
+/apps/web/.wrangler/
