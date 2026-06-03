@@ -1,8 +1,0 @@
-name = "onehome-web"
-pages_build_output_dir = ".open-next"
-compatibility_date = "2026-06-03"
-compatibility_flags = ["nodejs_compat"]
-
-[assets]
-directory = ".open-next"
-binding = "ASSETS"
